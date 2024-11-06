@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 1817525857}
   - component: {fileID: 1817525856}
   - component: {fileID: 1817525855}
+  - component: {fileID: 1817525860}
   m_Layer: 0
   m_Name: Objeto Interactuable
   m_TagString: Untagged
@@ -620,6 +621,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1817525860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817525854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa1b0094fdcf884da081ab8e6bbece3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EsTransparente: 0
+  EsInteractuable: 1
+  AtraviesaTransparentes: 1
+  Nombre: Ejemplo
 --- !u!1001 &1227132359797392878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -675,8 +692,86 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1842610184486539077, guid: c6d569013e8df7b4ea183ac4fce34817, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1227132359797392883}
+    - targetCorrespondingSourceObject: {fileID: 1842610184486539077, guid: c6d569013e8df7b4ea183ac4fce34817, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1227132359797392882}
+    - targetCorrespondingSourceObject: {fileID: 1842610184486539077, guid: c6d569013e8df7b4ea183ac4fce34817, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1227132359797392881}
+    - targetCorrespondingSourceObject: {fileID: 1842610184486539077, guid: c6d569013e8df7b4ea183ac4fce34817, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1227132359797392880}
   m_SourcePrefab: {fileID: 100100000, guid: c6d569013e8df7b4ea183ac4fce34817, type: 3}
+--- !u!1 &1227132359797392879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1842610184486539077, guid: c6d569013e8df7b4ea183ac4fce34817, type: 3}
+  m_PrefabInstance: {fileID: 1227132359797392878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1227132359797392880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227132359797392879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1b657f6f513994facd38bdfe65d47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gravedad: {fileID: 0}
+  Controles: {fileID: 0}
+  Apuntado: {fileID: 0}
+--- !u!114 &1227132359797392881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227132359797392879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31ba4d8d341c8d4f9a62417ff05cfa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EjeX: 0
+  EjeZ: 0
+  SensibilidadRaton: 0
+  PunteroRaton: {x: 0, y: 0, z: 0}
+  IncrementoRotacion: {x: 0, y: 0, z: 0}
+--- !u!114 &1227132359797392882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227132359797392879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9a772447a1c4498ba1ad2b7a946c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gravedad: -9.82
+  EnSuelo: 0
+  EjeY: 0
+  LimiteVelocidadCaida: -20
+  DireccionGravedad: {x: 0, y: 0, z: 0}
+--- !u!114 &1227132359797392883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227132359797392879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c884742458878d74287747887dd7886c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
