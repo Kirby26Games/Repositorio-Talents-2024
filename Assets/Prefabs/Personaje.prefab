@@ -150,6 +150,12 @@ GameObject:
   - component: {fileID: 4822940407699001334}
   - component: {fileID: 774713832964045091}
   - component: {fileID: 6199927191286336678}
+  - component: {fileID: 5960727684826891023}
+  - component: {fileID: 2513078662202316168}
+  - component: {fileID: 7859706764385994494}
+  - component: {fileID: 4776252764034807745}
+  - component: {fileID: 4246025664395647437}
+  - component: {fileID: 7959435553557860807}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -276,3 +282,97 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &5960727684826891023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842610184486539077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35a75c55e312f94996cc4ff4b7f3c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ejes: {x: 0, y: 0, z: 0}
+  DireccionFinal: {x: 0, y: 0, z: 0}
+  VelocidadBase: 5
+  MultiplicadorAlCorrer: 2
+  DistanciaSalto: 2
+  SaltosEnElAireMaximos: 0
+  SaltosEnElAireActuales: 0
+--- !u!114 &2513078662202316168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842610184486539077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c730db524dfe7f747ad6fa95c6dadfd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camara: {fileID: 2298994232700202430}
+  Ejes: {x: 0, y: 0}
+  Sensibilidad: 1
+  LimiteCamara: 90
+--- !u!114 &7859706764385994494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842610184486539077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f83ded30beb6146b8143f2d6592f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gravedad: -9.82
+  LimiteVelocidadCaida: -20
+  EjeY: 0
+  EnSuelo: 0
+--- !u!114 &4776252764034807745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842610184486539077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c8ba4ef037be9499430cf2d5d21601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4246025664395647437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842610184486539077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4e4e9fe25d9fa489bd5035f4eb0592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camara: {fileID: 6839159545666435416}
+  ColorDeteccionSuelo: {r: 1, g: 0, b: 0, a: 1}
+  EnSuelo: 0
+  RangoInteraccion: 4
+  ColorInteraccion: {r: 0.1573993, g: 1, b: 0, a: 1}
+  RangoMirar: 4
+  AnguloEscaladaMaximo: 50
+--- !u!114 &7959435553557860807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842610184486539077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d767cb8ade8171409d2d8bba21c2e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
