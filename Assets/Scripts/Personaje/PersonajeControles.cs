@@ -43,7 +43,7 @@ public class PersonajeControles : MonoBehaviour
             //Dejo de correr
             _Movimiento.Correr(false);
         }
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
         {
             _Rayos.Interactuar();
         }
