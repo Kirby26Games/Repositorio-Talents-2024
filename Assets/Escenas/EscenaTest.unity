@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c77f44e6ac306747bf5680af4d81906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Interaccion: Mover
+  Interaccion: 
 --- !u!1 &1230881635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c77f44e6ac306747bf5680af4d81906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Interaccion: Interactuar
+  Interaccion: 
 --- !u!1 &2018790296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,8 +1146,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

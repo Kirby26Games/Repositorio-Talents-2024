@@ -25,7 +25,7 @@ public interface IColisionableSalir
 }
 public interface ITriggereableEntrar
 {
-    public void AlTriggerearEntrar(Collider colision,GameObject objeto);
+    public void AlTriggerearEntrar(Collider colision, GameObject objeto);
 
 }
 public interface ITriggereableSalir
