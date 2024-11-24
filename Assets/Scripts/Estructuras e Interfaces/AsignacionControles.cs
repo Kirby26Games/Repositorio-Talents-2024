@@ -16,4 +16,5 @@ public struct Controles
     public static KeyCode Derecha = KeyCode.D;
     public static KeyCode Inventario = KeyCode.E;
     public static KeyCode Comprobar = KeyCode.Tab;
+    public static KeyCode Herramienta = KeyCode.Q;
 }

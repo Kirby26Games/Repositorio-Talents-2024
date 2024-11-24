@@ -17,10 +17,10 @@ public class PersonajeControles : MonoBehaviour
     }
     void Update()
     {
-        Controles();
+        ControlesFuncion();
     }
 
-    public void Controles()
+    public void ControlesFuncion()
     {
         _Movimiento.Ejes.x = Input.GetAxisRaw("Horizontal"); //Izquierda y derecha
         _Movimiento.Ejes.z = Input.GetAxisRaw("Vertical"); //Alante y atras
@@ -28,17 +28,17 @@ public class PersonajeControles : MonoBehaviour
         _Camara.Ejes.y = Input.GetAxis("Mouse Y");
         _Camara.Ejes.x = Input.GetAxis("Mouse X");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(Controles.Saltar))
         {
             //LLamar a saltar
             _Movimiento.Saltar();
         }
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(Controles.Correr))
         {
             //empiezo a correr
             _Movimiento.Correr(true);
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(Controles.Correr))
         {
             //Dejo de correr
             _Movimiento.Correr(false);
@@ -46,6 +46,10 @@ public class PersonajeControles : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             _Rayos.Interactuar();
+        }
+        if (Input.GetKeyDown(Controles.Herramienta))
+        {
+            GestorJuego.AbrirCerrarHerramienta();
         }
     }
 }
