@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,11 @@ public class PersonajeControles : MonoBehaviour
     private MovimientoPersonaje _Movimiento;
     private MovimientoCamara _Camara;
     private RayosPersonaje _Rayos;
+    private bool _TiempoParado;
 
+    public static event EventHandler EnPararTiempo;
+    public static event EventHandler EnReanudarTiempo;
+    public static event EventHandler EnInvertirTiempo;
 
     private void Awake()
     {
@@ -46,6 +51,26 @@ public class PersonajeControles : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             _Rayos.Interactuar();
+        }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(_TiempoParado)
+            {
+                EnReanudarTiempo?.Invoke(this, EventArgs.Empty);
+            }
+            else
+            {
+                EnPararTiempo?.Invoke(this, EventArgs.Empty);
+            }
+            _TiempoParado = !_TiempoParado;
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (_TiempoParado)
+            {
+                EnInvertirTiempo?.Invoke(this, EventArgs.Empty);
+                _TiempoParado = false;
+            }
         }
     }
 }
