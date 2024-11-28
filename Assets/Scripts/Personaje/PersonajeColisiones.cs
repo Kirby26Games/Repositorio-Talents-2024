@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class PersonajeColisiones : MonoBehaviour
 {
+    public float RangoDeteccion;
+    public GameObject Trigger;
+
+    void Awake() {
+      if (Trigger != null) {
+        Trigger.transform.localScale = Vector3.one * RangoDeteccion;
+      }
+    }
+
     private void OnTriggerEnter(Collider objetoTocado)
     {
         //si toco un objeto ITriggereableEntrar, ejecuto AlTriggerearEntrar

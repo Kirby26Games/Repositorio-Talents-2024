@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PersonajeControles : MonoBehaviour
 {
+    public static Action InteractuarAlt;
+
     private MovimientoPersonaje _Movimiento;
     private MovimientoCamara _Camara;
     private RayosPersonaje _Rayos;
@@ -33,7 +34,7 @@ public class PersonajeControles : MonoBehaviour
             //LLamar a saltar
             _Movimiento.Saltar();
         }
-        if(Input.GetKeyDown(Controles.Correr))
+        if (Input.GetKeyDown(Controles.Correr))
         {
             //empiezo a correr
             _Movimiento.Correr(true);
@@ -43,9 +44,17 @@ public class PersonajeControles : MonoBehaviour
             //Dejo de correr
             _Movimiento.Correr(false);
         }
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(Controles.Interactuar))
         {
             _Rayos.Interactuar();
+        }
+
+        if (Input.GetKeyDown(Controles.InteractuarAlt))
+        {
+            if (InteractuarAlt != null)
+            {
+                InteractuarAlt();
+            }
         }
         if (Input.GetKeyDown(Controles.Herramienta))
         {

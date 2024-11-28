@@ -12,6 +12,11 @@ public interface IInteractuable
     public void AlInteractuar();
 }
 
+public interface IActivable
+{
+    public void AlActivar();
+}
+
 public interface IColisionableEntrar
 {
     public void AlColisionarEntrar(Collider colision, GameObject objeto);
