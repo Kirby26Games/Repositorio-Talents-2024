@@ -49,6 +49,10 @@ public class PersonajeControles : MonoBehaviour
         {
             _Rayos.Interactuar();
         }
+        if (Input.GetKey(Controles.Mover))
+        {
+            _Rayos.Mover();//
+        }
 
         if (Input.GetKeyDown(Controles.InvertirElTiempo))
         {

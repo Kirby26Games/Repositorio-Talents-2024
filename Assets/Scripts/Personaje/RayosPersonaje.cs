@@ -67,6 +67,17 @@ public class RayosPersonaje : MonoBehaviour
             }
         }
     }
+    public void Mover()
+    {
+        if (Physics.Raycast(Camara.position, Camara.forward, out RaycastHit Datos, RangoInteraccion))
+        {
+            Debug.DrawRay(Camara.position, Camara.forward * Datos.distance, ColorInteraccion, 10f);
+            if (Datos.transform.TryGetComponent(out IMovible ObjetoInteractuable))
+            {
+                ObjetoInteractuable.AlMover();
+            }
+        }
+    }
 
     private void Mirar()
     {

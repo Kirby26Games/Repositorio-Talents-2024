@@ -9,7 +9,7 @@ public struct Controles
     public static KeyCode Correr = KeyCode.LeftShift;
     public static KeyCode Salir = KeyCode.Escape;
     public static KeyCode Interactuar = KeyCode.Mouse0;
-    public static KeyCode InteractuarAlt = KeyCode.Mouse1;
+    public static KeyCode Mover = KeyCode.Mouse1;
     public static KeyCode Adelante = KeyCode.W;
     public static KeyCode Atras = KeyCode.S;
     public static KeyCode Izquierda = KeyCode.A;
