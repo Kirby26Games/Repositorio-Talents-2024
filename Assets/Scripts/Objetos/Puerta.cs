@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Puerta : MonoBehaviour,IActivable
+public class Puerta : Objeto,IActivable
 {
     [Header("Configuración de Movimiento")]
     public bool MovimientoConstante = false; // Si debe moverse constantemente
