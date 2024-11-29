@@ -1,22 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interruptor : MonoBehaviour,IInteractuable
+public class Interruptor : Objeto, IInteractuable
 {
 
     // Lista de objetos que implementan la interfaz IActivable
     [Header("Lista de Objetos Activables")]
-    public List<IActivable> ObjetosActivables;
+    [SerializeField] public IReferencia<IActivable>[] ObjetosActivables; 
 
     public void AlInteractuar()
     {
         // Activar todos los objetos en la lista
-        foreach (IActivable activable in ObjetosActivables)
+        for (int i = 0; i < ObjetosActivables.Length; i++)
         {
-            if (activable != null)
-            {
-                activable.AlActivar();
-            }
+
+            ObjetosActivables[i].I.AlActivar();
+            print("Activo " + ObjetosActivables[i].gameObject.name);
         }
     }
 

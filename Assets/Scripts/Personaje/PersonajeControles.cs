@@ -10,6 +10,7 @@ public class PersonajeControles : MonoBehaviour
     private RayosPersonaje _Rayos;
 
 
+
     private void Awake()
     {
         _Movimiento = GetComponent<MovimientoPersonaje>();
@@ -49,12 +50,13 @@ public class PersonajeControles : MonoBehaviour
             _Rayos.Interactuar();
         }
 
-        if (Input.GetKeyDown(Controles.InteractuarAlt))
+        if (Input.GetKeyDown(Controles.InvertirElTiempo))
         {
-            if (InteractuarAlt != null)
-            {
-                InteractuarAlt();
-            }
+            GestorDeTiempo.InvertirTiempoGlobal();
+        }
+        if (Input.GetKeyDown(Controles.PararElTiempo))
+        {
+            GestorDeTiempo.PararReanudarTiempoGlobal();
         }
         if (Input.GetKeyDown(Controles.Herramienta))
         {

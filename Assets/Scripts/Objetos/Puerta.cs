@@ -14,8 +14,8 @@ public class Puerta : Objeto,IActivable
 
     private void Start()
     {
-        Posiciones[0] = transform.localPosition;
-        Posiciones[1] = transform.localPosition + Direccion;
+        Posiciones[1] = transform.localPosition;
+        Posiciones[0] = transform.localPosition + Direccion;
     }
 
     private void Update()
@@ -37,6 +37,15 @@ public class Puerta : Objeto,IActivable
         {
             transform.localPosition = Posiciones[Indice];
             DeboMoverme = false;
+            AvanzarIndice();
+        }
+    }
+    public void AvanzarIndice()
+    {
+        Indice++;
+        if(Indice>=Posiciones.Length)
+        {
+            Indice = 0;
         }
     }
     public void AlActivar()
