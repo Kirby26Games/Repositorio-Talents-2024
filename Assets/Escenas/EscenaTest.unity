@@ -458,7 +458,6 @@ GameObject:
   - component: {fileID: 554955493}
   - component: {fileID: 554955492}
   - component: {fileID: 554955491}
-  - component: {fileID: 554955490}
   - component: {fileID: 554955495}
   m_Layer: 0
   m_Name: ObjetoInvertible
@@ -467,20 +466,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &554955490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554955489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61251b669743a9b458613cb4c615ad10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Nombre: Pelota
-  Interaccion: 
 --- !u!135 &554955491
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -610,7 +595,6 @@ GameObject:
   - component: {fileID: 675196495}
   - component: {fileID: 675196494}
   - component: {fileID: 675196493}
-  - component: {fileID: 675196492}
   m_Layer: 0
   m_Name: Boton
   m_TagString: Untagged
@@ -618,23 +602,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &675196492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675196491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b53b153bf1b10bf4ea8788af98863158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Nombre: Boton
-  Interaccion: Pulsar
-  ObjetosActivables:
-  - objetivo: {fileID: 1403889173}
-    gameObject: {fileID: 1403889172}
 --- !u!65 &675196493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1931,7 +1898,7 @@ GameObject:
   - component: {fileID: 2139594251}
   - component: {fileID: 2139594250}
   - component: {fileID: 2139594249}
-  - component: {fileID: 2139594248}
+  - component: {fileID: 2139594253}
   m_Layer: 0
   m_Name: Cajon
   m_TagString: Untagged
@@ -1939,23 +1906,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2139594248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139594247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f61d6089983ee48bad631b72155410, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Nombre: Cajon
-  Interaccion: Abrir
-  LimiteX: 0
-  LimiteY: 0
-  LimiteZ: 2
 --- !u!65 &2139594249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2046,6 +1996,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2139594253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139594247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f61d6089983ee48bad631b72155410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Nombre: Cajon
+  Interaccion: Mover
+  LimiteX: 0
+  LimiteY: 0
+  LimiteZ: 1
 --- !u!1001 &1227132359797392878
 PrefabInstance:
   m_ObjectHideFlags: 0

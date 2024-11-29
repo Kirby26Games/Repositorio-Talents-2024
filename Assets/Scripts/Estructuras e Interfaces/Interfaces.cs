@@ -9,13 +9,16 @@ public interface IMirable
 
 public interface IInteractuable
 {
-
     public void AlInteractuar();
 }
 
 public interface IActivable
 {
     public void AlActivar();
+}
+public interface IMovible
+{ 
+    public void AlMover(); 
 }
 
 public interface IColisionableEntrar
@@ -31,7 +34,7 @@ public interface IColisionableSalir
 }
 public interface ITriggereableEntrar
 {
-    public void AlTriggerearEntrar(Collider colision,GameObject objeto);
+    public void AlTriggerearEntrar(Collider colision, GameObject objeto);
 
 }
 public interface ITriggereableSalir
@@ -48,7 +51,7 @@ public class IReferencia<T> : ISerializationCallbackReceiver where T : class
 {
     public UnityEngine.Object objetivo;
     public T I { get => objetivo as T; }
-   [HideInInspector] public GameObject gameObject;
+    [HideInInspector] public GameObject gameObject;
     //public static implicit operator bool(IReferencia<T> referenciaInterfaz) => referenciaInterfaz.objetivo != null;
     void AlValidar()
     {
@@ -63,7 +66,7 @@ public class IReferencia<T> : ISerializationCallbackReceiver where T : class
                 {
                     if (componentes[i] is T)
                     {
-                        objetivo= componentes[i];
+                        objetivo = componentes[i];
                         break;
                     }
                 }
