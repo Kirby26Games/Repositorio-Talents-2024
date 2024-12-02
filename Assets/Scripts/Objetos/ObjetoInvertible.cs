@@ -2,28 +2,26 @@ using UnityEngine;
 
 public class ObjetoInvertible : Objeto
 {
-    private Vector3 _PosicionOriginal;
-    private Vector3 _RotacionOriginal;
     private Rigidbody _RigidBody;
     private Vector3 _UltimaVelocidad;
-    private void Awake()
-    {
-        _RigidBody = GetComponent<Rigidbody>();
-        _PosicionOriginal = transform.position;
-        _RotacionOriginal = transform.eulerAngles;
 
-       
+    public override void CogerComponentesBasicos()
+    {
+        base.CogerComponentesBasicos();
+        _RigidBody = GetComponent<Rigidbody>();
     }
 
-    private void OnEnable()
+    public override void SuscribirEventos()
     {
+        base.SuscribirEventos();
         GestorDeTiempo.AlPararElTiempo += Detenerse;
         GestorDeTiempo.AlReanudarElTiempo += Reanudarse;
         GestorDeTiempo.AlInvertirTiempo += Invertirse;
     }
 
-    private void OnDisable()
+    public override void DesuscribirEventos()
     {
+        base.DesuscribirEventos();
         GestorDeTiempo.AlPararElTiempo -= Detenerse;
         GestorDeTiempo.AlReanudarElTiempo -= Reanudarse;
         GestorDeTiempo.AlInvertirTiempo -= Invertirse;

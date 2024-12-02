@@ -6,7 +6,8 @@ public class ObjetoMovimientoFijo : Objeto, IMovible
     public float LimiteX;
     public float LimiteY;
     public float LimiteZ;
-    private void Awake()
+
+    private void Start()
     {
         _PosicionOriginal = transform.position;
     }

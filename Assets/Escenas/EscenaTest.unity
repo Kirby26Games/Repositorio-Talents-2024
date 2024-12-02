@@ -228,7 +228,7 @@ MonoBehaviour:
   - Assets/Materiales/Construccion.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_4182705c-28e2-40a5-8e8d-7140017d734c
+    name: UM_OperatedMesh_b1cc644b-49b9-4ad2-9e39-4dd7c221990c
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: 9fa875d6d048bb649a61b7632e71979b, type: 2}
     buidVersion:
@@ -240,7 +240,7 @@ MonoBehaviour:
       IndexVersion: 0
       OptimizedTopology: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 4182705c-28e2-40a5-8e8d-7140017d734c
+  sourceMeshRendererGUID: b1cc644b-49b9-4ad2-9e39-4dd7c221990c
   guid: 7efdb28c-ae3d-4a9e-8dad-e1b70e6bc80e
   localOptions:
     RecalculateTangents: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   - Assets/Materiales/Construccion.mat
   currentMaterialIndex: -1
   renderableMesh:
-    name: UM_OperatedMesh_8c81b0b4-f4d3-4d8f-bdfc-4787ed6b85a8
+    name: UM_OperatedMesh_5e701ed6-c96a-4b27-ad75-2473723980bd
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: 451240c9be39c774bbfdf912156ae441, type: 2}
     buidVersion:
@@ -468,7 +468,7 @@ MonoBehaviour:
       IndexVersion: 0
       OptimizedTopology: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 8c81b0b4-f4d3-4d8f-bdfc-4787ed6b85a8
+  sourceMeshRendererGUID: 5e701ed6-c96a-4b27-ad75-2473723980bd
   guid: 34fe4913-438b-4e60-b56c-b6c73f260162
   localOptions:
     RecalculateTangents: 0
@@ -777,6 +777,7 @@ GameObject:
   - component: {fileID: 554955492}
   - component: {fileID: 554955491}
   - component: {fileID: 554955495}
+  - component: {fileID: 554955496}
   m_Layer: 0
   m_Name: ObjetoInvertible
   m_TagString: Untagged
@@ -901,6 +902,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &554955496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554955489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61251b669743a9b458613cb4c615ad10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Nombre: Pelota
+  Interaccion: 
 --- !u!1 &659553908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1017,7 @@ GameObject:
   - component: {fileID: 675196495}
   - component: {fileID: 675196494}
   - component: {fileID: 675196493}
+  - component: {fileID: 675196497}
   m_Layer: 0
   m_Name: Boton
   m_TagString: Untagged
@@ -1093,12 +1109,29 @@ Transform:
   m_GameObject: {fileID: 675196491}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: -2, z: 6}
+  m_LocalPosition: {x: -9, y: -2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &675196497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675196491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53b153bf1b10bf4ea8788af98863158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Nombre: Boton
+  Interaccion: Pulsar
+  ObjetosActivables:
+  - objetivo: {fileID: 1403889173}
+    gameObject: {fileID: 1403889172}
 --- !u!1 &913089447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1398,7 @@ MonoBehaviour:
   - Assets/Materiales/Construccion.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_b794dcaa-7b87-466f-a9e7-877d80005bed
+    name: UM_OperatedMesh_73d2f4a9-b7a3-4f4e-aa7f-2c3fb0358654
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: c85dcf5302cccde499b3a5e308ef6bdf, type: 2}
     buidVersion:
@@ -1377,7 +1410,7 @@ MonoBehaviour:
       IndexVersion: 0
       OptimizedTopology: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: b794dcaa-7b87-466f-a9e7-877d80005bed
+  sourceMeshRendererGUID: 73d2f4a9-b7a3-4f4e-aa7f-2c3fb0358654
   guid: c8006c63-44ce-4adf-9837-226cbe1075be
   localOptions:
     RecalculateTangents: 0
@@ -1502,7 +1535,7 @@ MonoBehaviour:
   - Assets/Materiales/Construccion.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_a5a6bd1c-ce42-4c4f-b9f0-65de3764626e
+    name: UM_OperatedMesh_2920b338-792c-458d-91a4-dcad4d5e92af
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: 66b780f458fb9054ca6c4537715e85cc, type: 2}
     buidVersion:
@@ -1514,7 +1547,7 @@ MonoBehaviour:
       IndexVersion: 0
       OptimizedTopology: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: a5a6bd1c-ce42-4c4f-b9f0-65de3764626e
+  sourceMeshRendererGUID: 2920b338-792c-458d-91a4-dcad4d5e92af
   guid: 8c0e2761-87b7-427f-be38-c0d6513ba754
   localOptions:
     RecalculateTangents: 0
@@ -2013,7 +2046,7 @@ Transform:
   m_GameObject: {fileID: 1164764729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -4, z: 1.36}
+  m_LocalPosition: {x: -3, y: -4, z: 1.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2269,7 +2302,7 @@ Transform:
   m_GameObject: {fileID: 1403889172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -3, z: 6}
+  m_LocalPosition: {x: -7, y: -3, z: 10}
   m_LocalScale: {x: 2, y: 3, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2440,7 +2473,7 @@ MonoBehaviour:
   - Assets/Materiales/Construccion.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_63224cd4-668b-42db-a55b-36eccb284af4
+    name: UM_OperatedMesh_b0393dbd-6772-4c29-b751-d030715543ed
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: 5db60d3006e4bc14c9a4892680643146, type: 2}
     buidVersion:
@@ -2452,7 +2485,7 @@ MonoBehaviour:
       IndexVersion: 0
       OptimizedTopology: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 63224cd4-668b-42db-a55b-36eccb284af4
+  sourceMeshRendererGUID: b0393dbd-6772-4c29-b751-d030715543ed
   guid: b55cd03e-c37b-45d1-84d3-b183af849714
   localOptions:
     RecalculateTangents: 0
@@ -2688,7 +2721,7 @@ MonoBehaviour:
   - Assets/Materiales/Construccion.mat
   currentMaterialIndex: -1
   renderableMesh:
-    name: UM_OperatedMesh_0ea0694a-d2a6-4c20-a388-4ef78e1bbb71
+    name: UM_OperatedMesh_80d98e51-3238-4be6-bd58-e93b68c39750
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: 1545492f56e819c4f923d78e604a9fb7, type: 2}
     buidVersion:
@@ -2700,7 +2733,7 @@ MonoBehaviour:
       IndexVersion: 0
       OptimizedTopology: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 0ea0694a-d2a6-4c20-a388-4ef78e1bbb71
+  sourceMeshRendererGUID: 80d98e51-3238-4be6-bd58-e93b68c39750
   guid: e808d575-c5e5-428e-b4bb-4ad6a80daae2
   localOptions:
     RecalculateTangents: 0

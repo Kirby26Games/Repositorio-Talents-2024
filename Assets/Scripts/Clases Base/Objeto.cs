@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 public abstract class Objeto : MonoBehaviour,IMirable
 {
@@ -7,8 +8,13 @@ public abstract class Objeto : MonoBehaviour,IMirable
 
     private void Awake()
     {
+        CogerComponentesBasicos();
+    }
+    public virtual void CogerComponentesBasicos()
+    {
         _Renderer = GetComponent<Renderer>();
     }
+
     public virtual void AlMirar()
     {
         GestorInterfaz.Instancia.MostrarInterfazInteraccion(Nombre+"\n"+Interaccion);
@@ -36,11 +42,22 @@ public abstract class Objeto : MonoBehaviour,IMirable
 
     private void OnEnable()
     {
-        GestorJuego.AlAbrirHerramienta += Brillo;
+        SuscribirEventos();
     }
 
     private void OnDisable()
     {
+        DesuscribirEventos();
+    }
+    public virtual void SuscribirEventos()
+    {
+
+        GestorJuego.AlAbrirHerramienta += Brillo;
+    }
+
+    public virtual void DesuscribirEventos()
+    {
+
         GestorJuego.AlAbrirHerramienta -= Brillo;
     }
 

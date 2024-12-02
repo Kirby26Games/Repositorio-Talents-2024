@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Puerta : Objeto,IActivable
+public class Puerta : Objeto, IActivable
 {
     [Header("Configuración de Movimiento")]
     public bool MovimientoConstante = false; // Si debe moverse constantemente
@@ -12,6 +12,11 @@ public class Puerta : Objeto,IActivable
     private bool DeboMoverme;
     private int Indice;
 
+
+    private void Awake()
+    {
+        CogerComponentesBasicos();
+    }
     private void Start()
     {
         Posiciones[1] = transform.localPosition;
@@ -43,7 +48,7 @@ public class Puerta : Objeto,IActivable
     public void AvanzarIndice()
     {
         Indice++;
-        if(Indice>=Posiciones.Length)
+        if (Indice >= Posiciones.Length)
         {
             Indice = 0;
         }
