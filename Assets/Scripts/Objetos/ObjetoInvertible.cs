@@ -11,8 +11,7 @@ public class ObjetoInvertible : Objeto
         _RigidBody = GetComponent<Rigidbody>();
         _PosicionOriginal = transform.position;
         _RotacionOriginal = transform.eulerAngles;
-
-       
+        base.Awake();       
     }
 
     private void OnEnable()

@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 554955492}
   - component: {fileID: 554955491}
   - component: {fileID: 554955495}
+  - component: {fileID: 554955496}
   m_Layer: 0
   m_Name: ObjetoInvertible
   m_TagString: Untagged
@@ -583,6 +584,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &554955496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554955489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61251b669743a9b458613cb4c615ad10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Nombre: Bola
+  Interaccion: Parable
 --- !u!1 &675196491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,9 +2025,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nombre: Cajon
   Interaccion: Mover
-  LimiteX: 0
-  LimiteY: 0
-  LimiteZ: 1
+  MinMaxX: {x: -2, y: 2}
+  MinMaxY: {x: 0, y: 0}
+  MinMaxZ: {x: -2, y: 2}
 --- !u!1001 &1227132359797392878
 PrefabInstance:
   m_ObjectHideFlags: 0

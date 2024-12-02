@@ -5,7 +5,7 @@ public abstract class Objeto : MonoBehaviour,IMirable
     public string Nombre;
     public string Interaccion;
 
-    private void Awake()
+    public void Awake()
     {
         _Renderer = GetComponent<Renderer>();
     }
