@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PersonajeControles : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class PersonajeControles : MonoBehaviour
         }
         if (Input.GetKey(Controles.Mover))
         {
-            _Rayos.Mover();//
+            _Rayos.Mover();
         }
 
         if (Input.GetKeyDown(Controles.InvertirElTiempo))
