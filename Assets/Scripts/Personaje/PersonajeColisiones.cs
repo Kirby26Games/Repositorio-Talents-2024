@@ -23,7 +23,10 @@ public class PersonajeColisiones : MonoBehaviour
     }
     private void OnTriggerExit(Collider objetoTocado)
     {
-        
+        if (objetoTocado.gameObject.TryGetComponent(out ITriggereableSalir colisionable))
+        {
+            colisionable.AlTriggerearSalir(objetoTocado, gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision objetoTocado)
