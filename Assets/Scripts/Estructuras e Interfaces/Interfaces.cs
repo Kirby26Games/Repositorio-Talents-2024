@@ -39,7 +39,7 @@ public interface ITriggereableEntrar
 }
 public interface ITriggereableSalir
 {
-    public void AlTriggerearEntrar(Collider colision, GameObject objeto);
+    public void AlTriggerearSalir(Collider colision, GameObject objeto);
 
 }
 
