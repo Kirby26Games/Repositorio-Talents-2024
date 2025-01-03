@@ -7,7 +7,7 @@ public class PersonajeControles : MonoBehaviour
 
     private MovimientoPersonaje _Movimiento;
     private MovimientoCamara _Camara;
-    private RayosPersonaje _Rayos;
+    private Interacciones _Interacciones;
 
 
 
@@ -15,7 +15,7 @@ public class PersonajeControles : MonoBehaviour
     {
         _Movimiento = GetComponent<MovimientoPersonaje>();
         _Camara = GetComponent<MovimientoCamara>();
-        _Rayos = GetComponent<RayosPersonaje>();
+        _Interacciones = GetComponent<Interacciones>();
     }
     void Update()
     {
@@ -47,13 +47,20 @@ public class PersonajeControles : MonoBehaviour
         }
         if (Input.GetKeyDown(Controles.Interactuar))
         {
-            _Rayos.Interactuar();
+            _Interacciones.Interactuar();
         }
         if (Input.GetKey(Controles.Mover))
         {
-            _Rayos.Mover();//
+            _Interacciones.Mover();//
         }
-
+        if (Input.GetKeyDown(Controles.Zoom))
+        {
+            _Camara.CambiarZoom(true);//
+        }
+        if (Input.GetKeyUp(Controles.Zoom))
+        {
+            _Camara.CambiarZoom(false);//
+        }
         if (Input.GetKeyDown(Controles.InvertirElTiempo))
         {
             GestorDeTiempo.InvertirTiempoGlobal();

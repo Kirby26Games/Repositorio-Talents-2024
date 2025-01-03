@@ -10,8 +10,7 @@ public class RayosPersonaje : MonoBehaviour
     [Header("Interacciones")]
     public Color ColorDeteccionSuelo;
     public bool EnSuelo;
-    public float RangoInteraccion=4;
-    public Color ColorInteraccion;
+
     public float RangoMirar = 10;
     public float AnguloEscaladaMaximo = 50;
     private float _RangoDeteccionSuelo;
@@ -20,7 +19,6 @@ public class RayosPersonaje : MonoBehaviour
     private float _Alto;
     private float _Ancho;
     private float _Radio;
-    private IMirable _UltimoObjetoMirado;
 
     private void Awake()
     {
@@ -35,7 +33,7 @@ public class RayosPersonaje : MonoBehaviour
     void Update()
     {
         DetectarSuelo();
-        Mirar();
+        
     }
     public void DetectarSuelo()
     {
@@ -55,46 +53,15 @@ public class RayosPersonaje : MonoBehaviour
         }
     }
 
-    public void Interactuar()
+    //Esto se puede transformar en una sola funcion, apunte
+    public GameObject RayoEnfrente(float rango)
     {
-        RaycastHit Datos;
-        if (Physics.Raycast(Camara.position, Camara.forward, out Datos, RangoInteraccion))
+        if (Physics.Raycast(Camara.position, Camara.forward, out RaycastHit Datos, rango))
         {
-            Debug.DrawRay(Camara.position, Camara.forward * Datos.distance, ColorInteraccion, 10f);
-            if (Datos.transform.TryGetComponent(out IInteractuable ObjetoInteractuable))
-            {
-                ObjetoInteractuable.AlInteractuar();
-            }
+                return Datos.transform.gameObject;
+            
         }
-    }
-    public void Mover()
-    {
-        if (Physics.Raycast(Camara.position, Camara.forward, out RaycastHit Datos, RangoInteraccion))
-        {
-            Debug.DrawRay(Camara.position, Camara.forward * Datos.distance, ColorInteraccion, 10f);
-            if (Datos.transform.TryGetComponent(out IMovible ObjetoInteractuable))
-            {
-                ObjetoInteractuable.AlMover();
-            }
-        }
-    }
-
-    private void Mirar()
-    {
-        if (Physics.Raycast(Camara.position, Camara.forward, out RaycastHit Datos, RangoInteraccion))
-        {
-            if (Datos.transform.TryGetComponent(out IMirable ObjetoMirable))
-            {
-                ObjetoMirable.AlMirar();
-                _UltimoObjetoMirado= ObjetoMirable;
-                return;
-            }
-        }
-        if(_UltimoObjetoMirado !=null)
-        {
-            _UltimoObjetoMirado.AlDejarDeMirar();
-            _UltimoObjetoMirado = null;
-        }
+        return null;
     }
     public void CalcularMedidas()
     {

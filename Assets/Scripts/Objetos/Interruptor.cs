@@ -6,8 +6,8 @@ public class Interruptor : Objeto, IInteractuable
 
     // Lista de objetos que implementan la interfaz IActivable
     [Header("Lista de Objetos Activables")]
-    [SerializeField] public IReferencia<IActivable>[] ObjetosActivables;
-        public void AlInteractuar()
+    public IReferencia<IActivable>[] ObjetosActivables;
+        public void AlInteractuar(GameObject objeto)
     {
         // Activar todos los objetos en la lista
         for (int i = 0; i < ObjetosActivables.Length; i++)

@@ -11,6 +11,15 @@ public class Fantasma : Objeto
         _EfectoParticulas = GetComponent<VisualEffect>();
     }
 
+    public override void AlMirar()
+    {
+        // No hace nada porque no tiene Renderer (todavia)
+    }
+    public override void AlDejarDeMirar()
+    {
+        // No hace nada porque no tiene Renderer (todavia)
+    }
+
     private void Detenerse()
     {
         _EstadoAnterior = 1;

@@ -17,11 +17,11 @@ public class ObjetoMovimientoFijo : Objeto, IMovible
     }
     private void MovimientoFijo()
     {
-        Vector3 posicionFinal = Vector3.zero;
+        Vector3 posicionFinal;
         posicionFinal = Camera.main.transform.position + Camera.main.transform.forward * 2;
-        posicionFinal.x = Mathf.Clamp(posicionFinal.x, _PosicionOriginal.x - LimiteX, _PosicionOriginal.x + LimiteX);
-        posicionFinal.y = Mathf.Clamp(posicionFinal.y, _PosicionOriginal.y - LimiteY, _PosicionOriginal.y + LimiteY);
-        posicionFinal.z = Mathf.Clamp(posicionFinal.z, _PosicionOriginal.z - LimiteZ, _PosicionOriginal.z + LimiteZ);
+        posicionFinal.x = Mathf.Clamp(posicionFinal.x, _PosicionOriginal.x, _PosicionOriginal.x + LimiteX);
+        posicionFinal.y = Mathf.Clamp(posicionFinal.y, _PosicionOriginal.y, _PosicionOriginal.y + LimiteY);
+        posicionFinal.z = Mathf.Clamp(posicionFinal.z, _PosicionOriginal.z, _PosicionOriginal.z + LimiteZ);
         transform.position = posicionFinal;
     }
 }

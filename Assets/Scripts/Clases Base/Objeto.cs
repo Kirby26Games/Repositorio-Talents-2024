@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 public abstract class Objeto : MonoBehaviour,IMirable
 {
@@ -23,7 +22,6 @@ public abstract class Objeto : MonoBehaviour,IMirable
 
     public virtual void AlDejarDeMirar()
     {
-        print("Dejo de mirar");
         GestorInterfaz.Instancia.OcultarInterazInteraccion();
         _Renderer.materials[1].SetInt("_Activo", 0);
     }

@@ -9,9 +9,8 @@ public interface IMirable
 
 public interface IInteractuable
 {
-    public void AlInteractuar();
+    public void AlInteractuar(GameObject objeto);
 }
-
 public interface IActivable
 {
     public void AlActivar();

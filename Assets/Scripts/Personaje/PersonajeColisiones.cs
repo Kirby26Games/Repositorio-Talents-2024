@@ -7,10 +7,12 @@ public class PersonajeColisiones : MonoBehaviour
     public float RangoDeteccion;
     public GameObject Trigger;
 
-    void Awake() {
-      if (Trigger != null) {
-        Trigger.transform.localScale = Vector3.one * RangoDeteccion;
-      }
+    void Awake()
+    {
+        if (Trigger != null)
+        {
+            Trigger.transform.localScale = Vector3.one * RangoDeteccion;
+        }
     }
 
     private void OnTriggerEnter(Collider objetoTocado)
@@ -34,7 +36,7 @@ public class PersonajeColisiones : MonoBehaviour
         //si toco un objeto IColisionableEntrar, ejecuto AlColisionarEntrar
         if (objetoTocado.gameObject.TryGetComponent(out IColisionableEntrar colisionable))
         {
-            colisionable.AlColisionarEntrar(objetoTocado.collider,gameObject);
+            colisionable.AlColisionarEntrar(objetoTocado.collider, gameObject);
         }
     }
     private void OnCollisionExit(Collision objetoTocado)
