@@ -8,9 +8,9 @@ public class MovimientoCamara : MonoBehaviour
     public float LimiteCamara=90;
     private float _RotacionX;
     public float ZoomDuracion = 1;
-    public float RangoDeVisionAlHacerZoom = 30;
     public bool ZoomInmediato = false;   //hacer zoom de golpe o no
     private float _RangoDeVisionNormal = 60; //Debo hacer que esto sean opciones del juego y opciones estatico
+    public float RangoDeVisionAlHacerZoom = 30;
     private float _RangoDeVision;
 
     void Start()
@@ -59,7 +59,7 @@ public class MovimientoCamara : MonoBehaviour
     }
     private void CalcularZoom(float objetivo)
     {
-        float distTotal = Mathf.Abs(objetivo - _RangoDeVision); // cantidad total para llegar la target
+        float distTotal = Mathf.Abs(_RangoDeVisionNormal - RangoDeVisionAlHacerZoom); // cantidad total para llegar la target
         if (ZoomInmediato)
         {
             Camara.fieldOfView = objetivo;
