@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public class Movible : Objeto, IInteractuable
 {
-    private Rigidbody _RigidBody;
+    internal Rigidbody _RigidBody;
     //public float ModificadorTraccion;
     //public float FuerzaDeTraccionMaxima;
     //public float VelocidadTraccion;

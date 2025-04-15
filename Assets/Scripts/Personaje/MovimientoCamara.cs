@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MovimientoCamara : MonoBehaviour
 {
+    //
     public Camera Camara;
     public Vector2 Ejes;
     public float Sensibilidad = 1;

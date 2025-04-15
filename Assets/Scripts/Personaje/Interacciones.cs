@@ -8,6 +8,10 @@ public class Interacciones : MonoBehaviour
     private IInteractuable _UltimoObjetoInteractuado;
     private RayosPersonaje _Rayos;
     private GameObject _ObjetoMirado;
+    private GameObject _ObjetoInteractuado;
+    public GameObject ObjetoInteractuado {
+      get { return _ObjetoInteractuado; }
+    }
 
 
     private void Awake()
@@ -36,6 +40,7 @@ public class Interacciones : MonoBehaviour
             return;
         }
         objetoInteractuable.AlInteractuar(Mano);
+        _ObjetoInteractuado = objeto;
         _UltimoObjetoInteractuado = objetoInteractuable;
     }
     public void Mover()

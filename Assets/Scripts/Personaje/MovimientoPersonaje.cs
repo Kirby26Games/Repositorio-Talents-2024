@@ -75,7 +75,7 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         bool puedo = false;
         //Si estoy en el suelo, siempre puedo saltar
-        if(_Rayos.EnSuelo)
+        if(_Gravedad.EnSuelo)
         {
             puedo = true; 
         }
@@ -90,7 +90,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void ReiniciarSaltos()
     {
-        if(_Rayos.EnSuelo)
+        if(_Gravedad.EnSuelo)
         {
             SaltosEnElAireActuales = 0;
         }
